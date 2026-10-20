@@ -2,7 +2,25 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+<div class="text-center" style="margin-bottom:20px;">
+    <h1 class="display-4">Product Catalog Home</h1>
 </div>
+
+<h4 style="border-bottom:1px solid rgb(198, 198, 198)">All Products</h4>
+@{
+	List<Product> products = ProductData.GetProducts();
+
+	foreach (Product p in products)
+	{
+		<p style="display: flex; justify-content: space-between; padding: 4px 0; border-bottom: 1px solid rgb(227, 227, 227)">
+			<a asp-controller="Products"
+			asp-action="Details"
+			asp-route-id="@p.Id">
+				<span>@p.Id - @p.Name</span>
+			</a>
+			<span>$@p.Price</span>
+		</p>
+	}
+
+}

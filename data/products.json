@@ -1,7 +1,17 @@
 [
   {
     "Id": 0,
-    "Name": "Test",
-    "Price": 50
+    "Name": "Apple",
+    "Price": 1.49
+  },
+  {
+    "Id": 1,
+    "Name": "Orange",
+    "Price": 2.29
+  },
+  {
+    "Id": 2,
+    "Name": "Banana",
+    "Price": 0.59
   }
 ]

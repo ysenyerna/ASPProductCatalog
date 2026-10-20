@@ -1,8 +1,13 @@
+@model Product
 @{
     ViewData["Title"] = "Details Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Details</h1>
+<div class="text-center" style="margin-bottom:30px;border-bottom:1px solid rgb(203, 203, 203)">
+    <h1 class="display-4">Product Details</h1>
 
 </div>
+
+<p>ID: @Model.Id</p>
+<p>Name: @Model.Name</p>
+<p>Price: $@Model.Price</p>

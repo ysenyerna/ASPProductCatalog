@@ -25,4 +25,14 @@ public class ProductsController : Controller
 
 		return RedirectToAction(nameof(Index));
 	}
+
+	public IActionResult Details(int id)
+	{
+		var p = ProductData.GetProduct(id);
+		if (p is null)
+			return RedirectToAction(nameof(Index));
+
+		return View(p);
+	}
+
 }
