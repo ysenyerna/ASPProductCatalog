@@ -1,0 +1,25 @@
+@model Product
+@{
+    ViewData["Title"] = "Create Product";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Create Product</h1>
+
+</div>
+
+<form asp-action="Create" method="post">
+	<div asp-validation-summary="ModelOnly"></div>
+
+	<label asp-for="Name"></label>
+	<input asp-for="Name" /><br />
+	<span asp-validation-for="Name"></span>
+	<br />
+
+	<label asp-for="Price"></label>
+	<input asp-for="Price" /><br />
+	<span asp-validation-for="Price"></span>
+	<br />
+
+	<button type="submit">Create</button>
+</form>
